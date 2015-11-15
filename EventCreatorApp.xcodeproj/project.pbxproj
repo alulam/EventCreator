@@ -33,6 +33,10 @@
 		AFC9663D1BF8338800F01A79 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9663C1BF8338800F01A79 /* ListViewController.swift */; };
 		AFC9663F1BF8348000F01A79 /* SingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9663E1BF8348000F01A79 /* SingleCell.swift */; };
 		AFC966411BF83D5900F01A79 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC966401BF83D5900F01A79 /* DetailsViewController.swift */; };
+		AFC966431BF84ECB00F01A79 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC966421BF84ECB00F01A79 /* MyProfileViewController.swift */; };
+		AFC966451BF8525700F01A79 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC966441BF8525700F01A79 /* ProfileViewCell.swift */; };
+		AFC966471BF8571B00F01A79 /* DetailsProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC966461BF8571B00F01A79 /* DetailsProfileViewController.swift */; };
+		AFC966491BF8602F00F01A79 /* AddNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC966481BF8602F00F01A79 /* AddNewEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		AFC9663C1BF8338800F01A79 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		AFC9663E1BF8348000F01A79 /* SingleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCell.swift; sourceTree = "<group>"; };
 		AFC966401BF83D5900F01A79 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		AFC966421BF84ECB00F01A79 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		AFC966441BF8525700F01A79 /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		AFC966461BF8571B00F01A79 /* DetailsProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsProfileViewController.swift; sourceTree = "<group>"; };
+		AFC966481BF8602F00F01A79 /* AddNewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +186,10 @@
 				AFC9663C1BF8338800F01A79 /* ListViewController.swift */,
 				AFC9663E1BF8348000F01A79 /* SingleCell.swift */,
 				AFC966401BF83D5900F01A79 /* DetailsViewController.swift */,
+				AFC966421BF84ECB00F01A79 /* MyProfileViewController.swift */,
+				AFC966441BF8525700F01A79 /* ProfileViewCell.swift */,
+				AFC966461BF8571B00F01A79 /* DetailsProfileViewController.swift */,
+				AFC966481BF8602F00F01A79 /* AddNewEventViewController.swift */,
 			);
 			path = EventCreatorApp;
 			sourceTree = "<group>";
@@ -331,12 +343,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC966451BF8525700F01A79 /* ProfileViewCell.swift in Sources */,
+				AFC966471BF8571B00F01A79 /* DetailsProfileViewController.swift in Sources */,
 				AF3A2A561BF7C0E10078BCD7 /* EventCell.swift in Sources */,
 				AF3A2A081BF7B0940078BCD7 /* ViewController.swift in Sources */,
+				AFC966491BF8602F00F01A79 /* AddNewEventViewController.swift in Sources */,
 				AFC9663B1BF829D600F01A79 /* Occur.swift in Sources */,
 				AFC9663F1BF8348000F01A79 /* SingleCell.swift in Sources */,
 				AFC966411BF83D5900F01A79 /* DetailsViewController.swift in Sources */,
 				AF3A2A061BF7B0940078BCD7 /* AppDelegate.swift in Sources */,
+				AFC966431BF84ECB00F01A79 /* MyProfileViewController.swift in Sources */,
 				AFC9663D1BF8338800F01A79 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

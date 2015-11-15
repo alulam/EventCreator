@@ -208,18 +208,25 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     //******
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
         
+        self.loadData()
         if(PFUser.currentUser() == nil){
             self.signinUser()
         }else{
             print("Current User \(PFUser.currentUser()?.username)")
         }
         
-        self.loadData()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+        
+       // self.loadData()
         
         self.tableView.registerClass(SingleCell.self, forCellReuseIdentifier: "groupcell")
 
@@ -271,7 +278,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         
         self.eventObject = self.eventsArray.objectAtIndex(indexPath.row) as! PFObject
@@ -279,6 +286,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
 
+    @IBAction func refreshAction(sender: AnyObject) {
+        
+        self.loadData()
+        
+    }
     /*
     // MARK: - Navigation
 
