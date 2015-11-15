@@ -116,7 +116,7 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         
         self.eventObject = self.eventsArray.objectAtIndex(indexPath.row) as! PFObject

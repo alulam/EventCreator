@@ -86,6 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kCX-W0-Gte">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="GEF-z8-481">
+                            <color key="tintColor" red="0.8980392157" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="refreshAction:" destination="yWm-kv-JKF" id="312-Ba-it4"/>
                             </connections>
@@ -93,7 +94,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="8nq-gj-J9S" id="32Y-5k-XOU"/>
-                        <segue destination="5oS-A6-m2s" kind="push" identifier="showEventDetails" id="NP4-Z5-A33"/>
+                        <segue destination="5oS-A6-m2s" kind="push" identifier="showEventDetails" id="SdO-23-eVJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiv-UF-BfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -212,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UsQ-70-pfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1550" y="60"/>
+            <point key="canvasLocation" x="1529" y="746"/>
         </scene>
         <!--Map-->
         <scene sceneID="Xt0-7g-yA6">
@@ -255,11 +256,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="5V9-to-B8T" id="Quc-qp-Wpg"/>
+                        <segue destination="5oS-A6-m2s" kind="push" identifier="showEventDetails" id="Goy-dV-60f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBG-gv-Bjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="691"/>
+            <point key="canvasLocation" x="857" y="746"/>
         </scene>
         <!--My Profile View Controller-->
         <scene sceneID="r48-Nn-z1u">
@@ -491,7 +493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mc-Kk-g37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621" y="1086"/>
+            <point key="canvasLocation" x="2153" y="1086"/>
         </scene>
         <!--Details Profile View Controller-->
         <scene sceneID="W1J-oW-OMv">
@@ -663,4 +665,7 @@
             <point key="canvasLocation" x="602" y="1330"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Goy-dV-60f"/>
+    </inferredMetricsTieBreakers>
 </document>
