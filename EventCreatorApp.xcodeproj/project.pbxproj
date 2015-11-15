@@ -37,6 +37,13 @@
 		AFC966451BF8525700F01A79 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC966441BF8525700F01A79 /* ProfileViewCell.swift */; };
 		AFC966471BF8571B00F01A79 /* DetailsProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC966461BF8571B00F01A79 /* DetailsProfileViewController.swift */; };
 		AFC966491BF8602F00F01A79 /* AddNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC966481BF8602F00F01A79 /* AddNewEventViewController.swift */; };
+		AFC966521BF896B600F01A79 /* profile_default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC9664B1BF896B600F01A79 /* profile_default.png */; };
+		AFC966531BF896B600F01A79 /* profile_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC9664C1BF896B600F01A79 /* profile_selected.png */; };
+		AFC966541BF896B600F01A79 /* map_default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC9664D1BF896B600F01A79 /* map_default.png */; };
+		AFC966551BF896B600F01A79 /* map_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC9664E1BF896B600F01A79 /* map_selected.png */; };
+		AFC966561BF896B600F01A79 /* calendar_default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC9664F1BF896B600F01A79 /* calendar_default.png */; };
+		AFC966571BF896B600F01A79 /* calendar_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC966501BF896B600F01A79 /* calendar_selected.png */; };
+		AFC966581BF896B600F01A79 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC966511BF896B600F01A79 /* food.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +102,13 @@
 		AFC966441BF8525700F01A79 /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		AFC966461BF8571B00F01A79 /* DetailsProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsProfileViewController.swift; sourceTree = "<group>"; };
 		AFC966481BF8602F00F01A79 /* AddNewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewEventViewController.swift; sourceTree = "<group>"; };
+		AFC9664B1BF896B600F01A79 /* profile_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_default.png; sourceTree = "<group>"; };
+		AFC9664C1BF896B600F01A79 /* profile_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_selected.png; sourceTree = "<group>"; };
+		AFC9664D1BF896B600F01A79 /* map_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_default.png; sourceTree = "<group>"; };
+		AFC9664E1BF896B600F01A79 /* map_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_selected.png; sourceTree = "<group>"; };
+		AFC9664F1BF896B600F01A79 /* calendar_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_default.png; sourceTree = "<group>"; };
+		AFC966501BF896B600F01A79 /* calendar_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_selected.png; sourceTree = "<group>"; };
+		AFC966511BF896B600F01A79 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +188,7 @@
 		AF3A2A041BF7B0940078BCD7 /* EventCreatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				AFC9664A1BF896A500F01A79 /* images */,
 				AF3A2A051BF7B0940078BCD7 /* AppDelegate.swift */,
 				AF3A2A071BF7B0940078BCD7 /* ViewController.swift */,
 				AF3A2A091BF7B0940078BCD7 /* Main.storyboard */,
@@ -210,6 +225,20 @@
 				AF3A2A271BF7B0940078BCD7 /* Info.plist */,
 			);
 			path = EventCreatorAppUITests;
+			sourceTree = "<group>";
+		};
+		AFC9664A1BF896A500F01A79 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AFC9664B1BF896B600F01A79 /* profile_default.png */,
+				AFC9664C1BF896B600F01A79 /* profile_selected.png */,
+				AFC9664D1BF896B600F01A79 /* map_default.png */,
+				AFC9664E1BF896B600F01A79 /* map_selected.png */,
+				AFC9664F1BF896B600F01A79 /* calendar_default.png */,
+				AFC966501BF896B600F01A79 /* calendar_selected.png */,
+				AFC966511BF896B600F01A79 /* food.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,9 +345,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC966551BF896B600F01A79 /* map_selected.png in Resources */,
+				AFC966581BF896B600F01A79 /* food.png in Resources */,
 				AF3A2A101BF7B0940078BCD7 /* LaunchScreen.storyboard in Resources */,
+				AFC966571BF896B600F01A79 /* calendar_selected.png in Resources */,
 				AF3A2A0D1BF7B0940078BCD7 /* Assets.xcassets in Resources */,
 				AF3A2A0B1BF7B0940078BCD7 /* Main.storyboard in Resources */,
+				AFC966531BF896B600F01A79 /* profile_selected.png in Resources */,
+				AFC966561BF896B600F01A79 /* calendar_default.png in Resources */,
+				AFC966541BF896B600F01A79 /* map_default.png in Resources */,
+				AFC966521BF896B600F01A79 /* profile_default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

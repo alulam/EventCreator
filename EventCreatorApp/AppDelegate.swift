@@ -20,6 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        let navigationBarAppearace = UINavigationBar.appearance()
+        // change navigation item title color
+        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.redColor()]
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState: .Selected)
+        
+        UITabBar.appearance().tintColor = UIColor.redColor()
+        
         Parse.enableLocalDatastore()
         Parse.setApplicationId("Lh7PFFqK5RwkuQgzgUilU50jL8U5u11qVxr7NCrX", clientKey: "7H3a5l8oGmFE2R6h3EAWje1FCiPHG0xCV9fhFiHc")
         

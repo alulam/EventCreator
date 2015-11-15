@@ -11,6 +11,8 @@ import Parse
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet var searchfield1: UITextField? = UITextField()
@@ -216,6 +218,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
+        //self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
+        //self.navigationController?.navigationBar.tintColor = UIColor.redColor()
+        
         self.searchfield1?.text = ""
         self.searchfield2?.text = ""
         
@@ -232,6 +237,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         
         
         
@@ -267,8 +273,18 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let event:PFObject = self.eventsArray.objectAtIndex(indexPath.row) as! PFObject
         
         cell.titleLabel.text = event.objectForKey("eventTitle") as? String
+        cell.titleLabel.font = UIFont.boldSystemFontOfSize(18.0)
+        
         cell.descLabel.text = event.objectForKey("eventDescription") as? String
         
+        let dateOfEvent = event.objectForKey("eventDate") as! NSDate
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy, hh:mm"
+        
+        let dateString = dateFormatter.stringFromDate(dateOfEvent)
+        
+        cell.dateLabel.text = dateString
         
         if(event.objectForKey("freeFood")?.boolValue == true ){
             cell.foodButton.hidden = false

@@ -57,6 +57,8 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
+       
+        
         self.loadData()
         
     }
@@ -66,6 +68,8 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         self.usernameLabel.text = "\((PFUser.currentUser()?.username)! as String)'s Events"
+        self.usernameLabel.font = UIFont.boldSystemFontOfSize(18.0)
+
       
 
         
@@ -96,6 +100,8 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
         let event:PFObject = self.eventsArray.objectAtIndex(indexPath.row) as! PFObject
         
         cell.titleLabel!.text = event.objectForKey("eventTitle") as? String
+        cell.titleLabel?.font = UIFont.boldSystemFontOfSize(18.0)
+
         cell.descLabel!.text = event.objectForKey("eventDescription") as? String
         
         

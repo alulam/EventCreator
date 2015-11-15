@@ -27,6 +27,8 @@ class AddNewEventViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController!.navigationBar.tintColor = UIColor.redColor()
+        
         self.titleField?.delegate = self
         self.descField?.delegate = self
         self.dateField?.delegate = self

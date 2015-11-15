@@ -16,6 +16,8 @@ class SingleCell: UITableViewCell {
     
     @IBOutlet weak var foodButton: UIButton! = UIButton()
     
+    @IBOutlet weak var dateLabel: UILabel! = UILabel()
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
