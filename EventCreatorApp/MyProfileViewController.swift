@@ -279,6 +279,40 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        
+        let currentuser = PFUser.currentUser()
+        
+        
+            
+            let delete = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in
+                print("Delete Button Clicked")
+                
+                if(currentuser != nil){
+                    
+                    let event:PFObject = self.eventsArray.objectAtIndex(indexPath.row) as! PFObject
+                    
+                    event.deleteInBackgroundWithBlock({ (bool, error) -> Void in
+                        
+                        if(error == nil){
+                            print("User Event Deleted!")
+                            self.loadData()
+                        }else{
+                            print("Error Deleting Event")
+                        }
+                        
+                    })
+                }
+            }
+            
+            delete.backgroundColor = UIColor.redColor()
+            
+            return [delete]
+      
+        
+    }//swipe
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showProfileEventDetails"){
             let controller = segue.destinationViewController as! DetailsProfileViewController

@@ -19,6 +19,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet var locationLabel: UILabel? = UILabel()
     @IBOutlet var costLabel: UILabel? = UILabel()
     @IBOutlet var foodLabel: UILabel? = UILabel()
+    @IBOutlet var rsvpButton: UIButton! = UIButton()
+    
     
     
     override func viewDidLoad() {
@@ -49,6 +51,20 @@ class DetailsViewController: UIViewController {
         self.foodLabel?.text = self.eventObject2.objectForKey("foodDescription") as? String
         
         
+        let rsvpersArray = self.eventObject2.objectForKey("rsvpList") as! NSArray
+        
+        
+        
+        if(rsvpersArray.containsObject((PFUser.currentUser()?.objectId)!)){
+            
+            self.rsvpButton.setTitle("Attending. Click to Un-Attend", forState: .Normal)
+            
+        }else{
+            
+            self.rsvpButton.setTitle("Not Attending. Click to Attend", forState: .Normal)
+        }
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -58,16 +74,31 @@ class DetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func rsvpActionPressed(sender: AnyObject) {
+    @IBAction func rsvpActionPressed(sender: UIButton) {
         print("RSVP Pressed")
         
         //let eventObject = PFObject(className: "Event")
-       
         
-        self.eventObject2.addObject((PFUser.currentUser()?.objectId)!, forKey: "rsvpList")
+        let rsvpersArray = self.eventObject2.objectForKey("rsvpList") as! NSArray
+        
+        
+       
+        if(rsvpersArray.containsObject((PFUser.currentUser()?.objectId)!)){
+            self.eventObject2.removeObject((PFUser.currentUser()?.objectId)!, forKey: "rsvpList")
+            sender.setTitle("Not Attending. Click to Attend", forState: .Normal)
+            
+        }else{
+            self.eventObject2.addObject((PFUser.currentUser()?.objectId)!, forKey: "rsvpList")
+            sender.setTitle("Attending. Click to Un-Attend", forState: .Normal)
+        }
+        
+        
+        
+        
+        
         self.eventObject2.saveInBackgroundWithBlock { (bool: Bool, error: NSError?) -> Void in
             if(error == nil){
-                print("RSVP saved successfully")
+                print("RSVP Switch Saved")
             }else{
                 print(error)
             }

@@ -7,7 +7,7 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--Events-->
+        <!--AroundUs-->
         <scene sceneID="ZHl-EF-CdD">
             <objects>
                 <viewController id="yWm-kv-JKF" customClass="ListViewController" customModule="EventCreatorApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -125,7 +125,7 @@
                             <constraint firstItem="8nq-gj-J9S" firstAttribute="bottom" secondItem="aL1-RA-LUw" secondAttribute="top" id="vw4-Rf-zec"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Events" id="kCX-W0-Gte">
+                    <navigationItem key="navigationItem" title="AroundUs" id="kCX-W0-Gte">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="GEF-z8-481">
                             <color key="tintColor" red="0.95686274510000002" green="0.31226861779999998" blue="0.20538445490000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -142,9 +142,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiv-UF-BfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="60"/>
+            <point key="canvasLocation" x="1043" y="-64"/>
         </scene>
-        <!--Event Detail-->
+        <!--Event Details-->
         <scene sceneID="bfA-YC-vdI">
             <objects>
                 <viewController id="5oS-A6-m2s" customClass="DetailsViewController" customModule="EventCreatorApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,7 +159,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EventDescription" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN1-at-Utb">
                                 <rect key="frame" x="20" y="135" width="275" height="67"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="nzb-oA-4ww"/>
+                                    <constraint firstAttribute="height" constant="67" id="mnu-3B-7eX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,7 +168,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQM-cS-d5F">
                                 <rect key="frame" x="20" y="217" width="262" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Yfs-LA-aaP"/>
+                                    <constraint firstAttribute="height" constant="21" id="LxJ-lU-Al9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,8 +183,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaU-Dx-5XU">
                                 <rect key="frame" x="20" y="325" width="158" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="eJD-ii-KAJ"/>
-                                    <constraint firstAttribute="width" constant="158" id="tLa-Bq-5Hu"/>
+                                    <constraint firstAttribute="width" constant="158" id="bWx-ZF-ja2"/>
+                                    <constraint firstAttribute="height" constant="21" id="lbR-Vx-Q5H"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -193,20 +193,20 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5b-xX-pP8">
                                 <rect key="frame" x="20" y="354" width="280" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="rjK-hX-LT6"/>
+                                    <constraint firstAttribute="height" constant="70" id="iP0-ro-zK7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcY-2e-yy4">
-                                <rect key="frame" x="139" y="439" width="46" height="30"/>
+                                <rect key="frame" x="20" y="439" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.31226861779999998" blue="0.20538445490000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="DsZ-PM-zKs"/>
-                                    <constraint firstAttribute="height" constant="30" id="RML-2k-sxD"/>
+                                    <constraint firstAttribute="height" constant="30" id="NZO-z1-mhM"/>
                                 </constraints>
-                                <state key="normal" title="RSVP">
-                                    <color key="titleColor" red="0.95686274510000002" green="0.31226861779999998" blue="0.20538445490000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Not Attending. Click to Attend">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="rsvpActionPressed:" destination="5oS-A6-m2s" eventType="touchUpInside" id="Fwj-NH-pf0"/>
@@ -220,44 +220,46 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iQM-cS-d5F" firstAttribute="top" secondItem="eN1-at-Utb" secondAttribute="bottom" constant="15" id="6J5-yX-Dob"/>
-                            <constraint firstItem="iQM-cS-d5F" firstAttribute="leading" secondItem="rgf-by-JUd" secondAttribute="leading" id="BAn-SH-g4d"/>
-                            <constraint firstItem="rgf-by-JUd" firstAttribute="centerX" secondItem="aBb-yw-2VD" secondAttribute="centerX" id="CCV-P9-oV1"/>
-                            <constraint firstItem="rgf-by-JUd" firstAttribute="trailing" secondItem="w5b-xX-pP8" secondAttribute="trailing" id="CU0-Tn-CCH"/>
-                            <constraint firstItem="iQM-cS-d5F" firstAttribute="top" secondItem="aBb-yw-2VD" secondAttribute="bottom" constant="72" id="GpN-DQ-vQi"/>
-                            <constraint firstItem="kcY-2e-yy4" firstAttribute="top" secondItem="w5b-xX-pP8" secondAttribute="bottom" constant="15" id="Jwp-Nu-0iU"/>
-                            <constraint firstItem="iQM-cS-d5F" firstAttribute="leading" secondItem="eN1-at-Utb" secondAttribute="leading" id="SDT-6Q-gsy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eN1-at-Utb" secondAttribute="trailing" constant="9" id="Yx5-fq-Mj1"/>
-                            <constraint firstItem="aBb-yw-2VD" firstAttribute="top" secondItem="gfJ-kE-cid" secondAttribute="bottom" constant="8" symbolic="YES" id="fzD-tn-Akd"/>
-                            <constraint firstItem="rgf-by-JUd" firstAttribute="leading" secondItem="ZaU-Dx-5XU" secondAttribute="leading" id="kLv-Rq-7gj"/>
-                            <constraint firstItem="eN1-at-Utb" firstAttribute="leading" secondItem="EsX-dh-rTk" secondAttribute="leadingMargin" constant="4" id="ln0-tS-iFr"/>
-                            <constraint firstItem="w5b-xX-pP8" firstAttribute="top" secondItem="ZaU-Dx-5XU" secondAttribute="bottom" constant="8" symbolic="YES" id="mSH-wl-pkV"/>
-                            <constraint firstItem="kcY-2e-yy4" firstAttribute="leading" secondItem="EsX-dh-rTk" secondAttribute="leading" constant="139" id="nA8-7j-6ZT"/>
-                            <constraint firstItem="ZaU-Dx-5XU" firstAttribute="leading" secondItem="w5b-xX-pP8" secondAttribute="leading" id="oeX-Oj-Uaz"/>
-                            <constraint firstItem="I0N-9E-RSw" firstAttribute="top" secondItem="kcY-2e-yy4" secondAttribute="bottom" constant="50" id="ofe-h0-VVf"/>
-                            <constraint firstItem="ZaU-Dx-5XU" firstAttribute="top" secondItem="rgf-by-JUd" secondAttribute="bottom" constant="8" symbolic="YES" id="sZv-AF-x4W"/>
-                            <constraint firstItem="rgf-by-JUd" firstAttribute="top" secondItem="iQM-cS-d5F" secondAttribute="bottom" constant="8" symbolic="YES" id="vyQ-9W-6vJ"/>
-                            <constraint firstItem="aBb-yw-2VD" firstAttribute="leading" secondItem="EsX-dh-rTk" secondAttribute="leadingMargin" constant="-3" id="xGD-N6-W9v"/>
-                            <constraint firstItem="aBb-yw-2VD" firstAttribute="centerX" secondItem="EsX-dh-rTk" secondAttribute="centerX" id="xfQ-7c-uZ4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iQM-cS-d5F" secondAttribute="trailing" constant="22" id="zvs-Vm-cPn"/>
-                            <constraint firstItem="eN1-at-Utb" firstAttribute="top" secondItem="gfJ-kE-cid" secondAttribute="bottom" constant="71" id="zzg-N2-8en"/>
+                            <constraint firstItem="ZaU-Dx-5XU" firstAttribute="top" secondItem="rgf-by-JUd" secondAttribute="bottom" constant="8" symbolic="YES" id="6AC-SF-NuR"/>
+                            <constraint firstItem="rgf-by-JUd" firstAttribute="centerX" secondItem="aBb-yw-2VD" secondAttribute="centerX" id="JOa-Bw-5hg"/>
+                            <constraint firstItem="rgf-by-JUd" firstAttribute="top" secondItem="iQM-cS-d5F" secondAttribute="bottom" constant="8" symbolic="YES" id="JUh-u1-X5T"/>
+                            <constraint firstItem="kcY-2e-yy4" firstAttribute="leading" secondItem="w5b-xX-pP8" secondAttribute="leading" id="Lae-5x-mpx"/>
+                            <constraint firstItem="ZaU-Dx-5XU" firstAttribute="leading" secondItem="rgf-by-JUd" secondAttribute="leading" id="WqC-yu-8QW"/>
+                            <constraint firstItem="eN1-at-Utb" firstAttribute="leading" secondItem="EsX-dh-rTk" secondAttribute="leadingMargin" constant="4" id="YSw-n6-mCz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eN1-at-Utb" secondAttribute="trailing" constant="9" id="Zwe-My-f0p"/>
+                            <constraint firstItem="I0N-9E-RSw" firstAttribute="top" secondItem="kcY-2e-yy4" secondAttribute="bottom" constant="55" id="dEc-lF-xKc"/>
+                            <constraint firstItem="kcY-2e-yy4" firstAttribute="top" secondItem="w5b-xX-pP8" secondAttribute="bottom" constant="15" id="dnu-1J-L0h"/>
+                            <constraint firstItem="w5b-xX-pP8" firstAttribute="top" secondItem="ZaU-Dx-5XU" secondAttribute="bottom" constant="8" symbolic="YES" id="evJ-YZ-RnB"/>
+                            <constraint firstItem="kcY-2e-yy4" firstAttribute="centerX" secondItem="EsX-dh-rTk" secondAttribute="centerX" id="f0H-eG-swO"/>
+                            <constraint firstItem="aBb-yw-2VD" firstAttribute="leading" secondItem="EsX-dh-rTk" secondAttribute="leadingMargin" constant="-3" id="f7y-Ar-MKc"/>
+                            <constraint firstItem="iQM-cS-d5F" firstAttribute="top" secondItem="aBb-yw-2VD" secondAttribute="bottom" constant="72" id="hSV-1S-94d"/>
+                            <constraint firstItem="rgf-by-JUd" firstAttribute="leading" secondItem="iQM-cS-d5F" secondAttribute="leading" id="iZ5-Mi-1Kj"/>
+                            <constraint firstItem="iQM-cS-d5F" firstAttribute="top" secondItem="eN1-at-Utb" secondAttribute="bottom" constant="15" id="ken-Qv-eys"/>
+                            <constraint firstItem="eN1-at-Utb" firstAttribute="leading" secondItem="iQM-cS-d5F" secondAttribute="leading" id="mkV-5z-puS"/>
+                            <constraint firstItem="w5b-xX-pP8" firstAttribute="trailing" secondItem="kcY-2e-yy4" secondAttribute="trailing" id="oPB-iS-Up1"/>
+                            <constraint firstItem="w5b-xX-pP8" firstAttribute="leading" secondItem="ZaU-Dx-5XU" secondAttribute="leading" id="vwb-ve-rbq"/>
+                            <constraint firstItem="w5b-xX-pP8" firstAttribute="trailing" secondItem="rgf-by-JUd" secondAttribute="trailing" id="xEn-jJ-GEX"/>
+                            <constraint firstItem="aBb-yw-2VD" firstAttribute="top" secondItem="gfJ-kE-cid" secondAttribute="bottom" constant="8" symbolic="YES" id="yIi-Gu-Rgc"/>
+                            <constraint firstItem="eN1-at-Utb" firstAttribute="top" secondItem="gfJ-kE-cid" secondAttribute="bottom" constant="71" id="yMM-Cf-KJ8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iQM-cS-d5F" secondAttribute="trailing" constant="22" id="zRd-0b-b1F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Event Detail" id="zIW-jV-fgW"/>
+                    <navigationItem key="navigationItem" title="Event Details" id="zIW-jV-fgW"/>
                     <connections>
                         <outlet property="costLabel" destination="ZaU-Dx-5XU" id="YU4-Is-iD3"/>
                         <outlet property="descLabel" destination="eN1-at-Utb" id="3RE-0P-sAz"/>
                         <outlet property="foodLabel" destination="w5b-xX-pP8" id="UHU-eN-NdU"/>
                         <outlet property="locationLabel" destination="rgf-by-JUd" id="14g-Ox-oIL"/>
+                        <outlet property="rsvpButton" destination="kcY-2e-yy4" id="RNL-p0-MiX"/>
                         <outlet property="timeLabel" destination="iQM-cS-d5F" id="m58-eY-uvM"/>
                         <outlet property="titleLabel" destination="aBb-yw-2VD" id="SAP-tg-cz7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UsQ-70-pfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061" y="746"/>
+            <point key="canvasLocation" x="1993" y="126"/>
         </scene>
-        <!--Campus Events-->
+        <!--AroundUs-->
         <scene sceneID="Xt0-7g-yA6">
             <objects>
                 <viewController id="emx-TE-yz8" customClass="ViewController" customModule="EventCreatorApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -284,7 +286,7 @@
                     <toolbarItems>
                         <barButtonItem enabled="NO" title="Item" id="Tag-YE-eFg"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Campus Events" id="pgf-8F-DLt"/>
+                    <navigationItem key="navigationItem" title="AroundUs" id="pgf-8F-DLt"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="5V9-to-B8T" id="Quc-qp-Wpg"/>
@@ -295,7 +297,7 @@
             </objects>
             <point key="canvasLocation" x="1210" y="663"/>
         </scene>
-        <!--My Profile View Controller-->
+        <!--AroundUs-->
         <scene sceneID="r48-Nn-z1u">
             <objects>
                 <viewController id="daC-uN-79s" customClass="MyProfileViewController" customModule="EventCreatorApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -386,7 +388,7 @@
                             <constraint firstItem="JEg-5B-f4d" firstAttribute="leading" secondItem="guy-U9-c6O" secondAttribute="leadingMargin" constant="-1" id="oFd-PX-pfE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Gc1-c2-3I0">
+                    <navigationItem key="navigationItem" title="AroundUs" id="Gc1-c2-3I0">
                         <barButtonItem key="leftBarButtonItem" image="logout.png" style="plain" id="Cgp-zu-gfW">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -417,7 +419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suJ-jy-q8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1134" y="1330"/>
+            <point key="canvasLocation" x="1190" y="1395"/>
         </scene>
         <!--Add New Event-->
         <scene sceneID="cPe-3D-CFD">
@@ -536,9 +538,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mc-Kk-g37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2685" y="1086"/>
+            <point key="canvasLocation" x="1993" y="1074"/>
         </scene>
-        <!--Event Detail-->
+        <!--Event Details-->
         <scene sceneID="W1J-oW-OMv">
             <objects>
                 <viewController id="bzv-6z-aoc" customClass="DetailsProfileViewController" customModule="EventCreatorApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -632,7 +634,7 @@
                             <constraint firstItem="Uvr-Am-lrB" firstAttribute="top" secondItem="fwH-Aa-9be" secondAttribute="bottom" constant="8" symbolic="YES" id="wfb-Ln-Qhf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Event Detail" id="6bC-5H-Lr6"/>
+                    <navigationItem key="navigationItem" title="Event Details" id="6bC-5H-Lr6"/>
                     <connections>
                         <outlet property="costLabel" destination="riA-5l-pzk" id="41J-Uj-9dE"/>
                         <outlet property="descLabel" destination="Uvr-Am-lrB" id="V1J-sF-iQ1"/>
@@ -645,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX6-AX-4xu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="1673"/>
+            <point key="canvasLocation" x="1993" y="1749"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BoT-kt-vYE">
@@ -683,7 +685,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p12-r7-WLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="60"/>
+            <point key="canvasLocation" x="583" y="-20"/>
         </scene>
         <!--Profile-->
         <scene sceneID="fya-N8-olm">
@@ -702,7 +704,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ior-I9-0My" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="403" y="1337"/>
+            <point key="canvasLocation" x="583" y="1395"/>
         </scene>
         <!--Map-->
         <scene sceneID="EB7-IR-z5w">
@@ -721,7 +723,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2h-Oz-Mhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="663"/>
+            <point key="canvasLocation" x="583" y="655"/>
         </scene>
     </scenes>
     <resources>
@@ -735,6 +737,6 @@
         <image name="profile_selected.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SdO-23-eVJ"/>
+        <segue reference="Goy-dV-60f"/>
     </inferredMetricsTieBreakers>
 </document>
