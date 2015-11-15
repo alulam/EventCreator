@@ -30,6 +30,7 @@
 		AF3A2A521BF7B8E40078BCD7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3A2A511BF7B8E40078BCD7 /* Accounts.framework */; };
 		AF3A2A541BF7B8F10078BCD7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3A2A531BF7B8F10078BCD7 /* Social.framework */; };
 		AF3A2A561BF7C0E10078BCD7 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A2A551BF7C0E10078BCD7 /* EventCell.swift */; };
+		AFC966391BF7F30B00F01A79 /* EventSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC966381BF7F30B00F01A79 /* EventSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		AF3A2A511BF7B8E40078BCD7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		AF3A2A531BF7B8F10078BCD7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		AF3A2A551BF7C0E10078BCD7 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCell.swift; path = EventCreatorApp/EventCell.swift; sourceTree = "<group>"; };
+		AFC966381BF7F30B00F01A79 /* EventSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			children = (
 				AF3A2A051BF7B0940078BCD7 /* AppDelegate.swift */,
 				AF3A2A071BF7B0940078BCD7 /* ViewController.swift */,
+				AFC966381BF7F30B00F01A79 /* EventSwift.swift */,
 				AF3A2A091BF7B0940078BCD7 /* Main.storyboard */,
 				AF3A2A371BF7B6A70078BCD7 /* OurHeaderFile.h */,
 				AF3A2A381BF7B7160078BCD7 /* EventCreatorApp-Bridging-Header.h */,
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC966391BF7F30B00F01A79 /* EventSwift.swift in Sources */,
 				AF3A2A561BF7C0E10078BCD7 /* EventCell.swift in Sources */,
 				AF3A2A3C1BF7B7620078BCD7 /* SearchViewController.swift in Sources */,
 				AF3A2A081BF7B0940078BCD7 /* ViewController.swift in Sources */,
@@ -558,6 +562,7 @@
 				AF3A2A2C1BF7B0940078BCD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF3A2A2D1BF7B0940078BCD7 /* Build configuration list for PBXNativeTarget "EventCreatorAppTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +571,7 @@
 				AF3A2A2F1BF7B0940078BCD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF3A2A301BF7B0940078BCD7 /* Build configuration list for PBXNativeTarget "EventCreatorAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +580,7 @@
 				AF3A2A321BF7B0940078BCD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
