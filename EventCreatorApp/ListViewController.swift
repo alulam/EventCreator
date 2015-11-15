@@ -14,6 +14,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tableView: UITableView!
     
     var eventsArray:NSMutableArray = NSMutableArray()
+    var eventObject = PFObject(className: "Event")
     
     // Load
     func loadData(){
@@ -48,9 +49,175 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
     }
+    
+    //******
+    func signinUser(){
+        
+        //###########################################################################
+        // Alert for Signing up or loggin in
+        
+        let alert:UIAlertController = UIAlertController(title: "Welcome", message: "You need to signup or login", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        alert.addAction(UIAlertAction(title: "Login", style: UIAlertActionStyle.Default, handler: {
+            alertAction in
+            
+            //********************************************************************
+            
+            let loginAlert:UIAlertController = UIAlertController(title: "Login", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // Username textfield created with placeholder
+            loginAlert.addTextFieldWithConfigurationHandler({
+                
+                textfield in
+                textfield.placeholder = "Username"
+                
+            })
+            
+            // Password textfield created with placeholder
+            loginAlert.addTextFieldWithConfigurationHandler({
+                
+                textfield in
+                textfield.placeholder = "Password"
+                textfield.secureTextEntry = true
+                
+            })
+            
+            // Action for Login button
+            loginAlert.addAction(UIAlertAction(title: "Login", style: UIAlertActionStyle.Default, handler: {
+                alertAction in
+                
+                let textFields:NSArray = loginAlert.textFields! as NSArray
+                
+                let usernameTextField:UITextField = textFields.objectAtIndex(0) as! UITextField
+                let passwordTextField:UITextField = textFields.objectAtIndex(1)as! UITextField
+                
+                PFUser.logInWithUsernameInBackground(usernameTextField.text!, password: passwordTextField.text!){ (user:PFUser?, error:NSError?) -> Void in
+                    
+                    if((user) != nil){
+                        print("Login success!")
+                        
+                        
+                        
+                    }else{
+                        print(error)
+                        let errorAlert:UIAlertController = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
+                        
+                        errorAlert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.Default, handler: { (action:UIAlertAction) -> Void in
+                            
+                            self.presentViewController(loginAlert, animated: true, completion: nil)
+                            
+                        }))
+                        
+                        self.presentViewController(errorAlert, animated: true, completion: nil)
+                    }
+                    
+                    
+                    
+                }
+                
+            }))
+            self.presentViewController(loginAlert, animated: true, completion: nil)
+            //********************************************************************
+            
+            
+            
+        }))
+        
+        
+        alert.addAction(UIAlertAction(title: "Signup", style: UIAlertActionStyle.Default, handler: {
+            alertAction in
+            //********************************************************************
+            let signupAlert:UIAlertController = UIAlertController(title: "New Account", message: "Enter the following info to signup", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // Email textfield created with placeholder
+            signupAlert.addTextFieldWithConfigurationHandler({
+                
+                textfield in
+                textfield.placeholder = "Email"
+                
+            })
+            
+            // Username textfield created with placeholder
+            signupAlert.addTextFieldWithConfigurationHandler({
+                
+                textfield in
+                textfield.placeholder = "Username"
+                
+            })
+            
+            // Password textfield created with placeholder
+            signupAlert.addTextFieldWithConfigurationHandler({
+                
+                textfield in
+                textfield.placeholder = "Password"
+                textfield.secureTextEntry = true
+                
+            })
+            
+            
+            // Action for Login button
+            signupAlert.addAction(UIAlertAction(title: "Signup", style: UIAlertActionStyle.Default, handler: {
+                alertAction in
+                
+                let textFields:NSArray = signupAlert.textFields! as NSArray
+                
+                let emailTextField:UITextField = textFields.objectAtIndex(0) as! UITextField
+                let usernameTextField:UITextField = textFields.objectAtIndex(1)as! UITextField
+                let passwordTextField:UITextField = textFields.objectAtIndex(2) as! UITextField
+                
+                
+                let newUser:PFUser = PFUser()
+                newUser.email = emailTextField.text
+                newUser.username = usernameTextField.text
+                newUser.password = passwordTextField.text
+                
+                newUser.signUpInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in
+                    if(success){
+                        print("New user created")
+                        
+                        
+                        
+                    }else{
+                        print(error)
+                        let errorAlert:UIAlertController = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
+                        
+                        errorAlert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.Default, handler: { (action:UIAlertAction) -> Void in
+                            
+                            self.presentViewController(signupAlert, animated: true, completion: nil)
+                            
+                        }))
+                        
+                        self.presentViewController(errorAlert, animated: true, completion: nil)
+                    }
+                })
+                
+            }))
+            self.presentViewController(signupAlert, animated: true, completion: nil)
+            //********************************************************************
+            
+            
+            
+        }))
+        
+        
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+        //###########################################################################
+        
+    }
+    //******
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(PFUser.currentUser() == nil){
+            self.signinUser()
+        }else{
+            print("Current User \(PFUser.currentUser()?.username)")
+        }
         
         self.loadData()
         
@@ -79,7 +246,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        print("YAY")
         let cell:SingleCell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! SingleCell
         
         let event:PFObject = self.eventsArray.objectAtIndex(indexPath.row) as! PFObject
@@ -93,6 +259,23 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         return cell
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showEventDetails"){
+            let controller = segue.destinationViewController as! DetailsViewController
+            controller.eventObject2 = self.eventObject
+        }
+        
+        
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        self.eventObject = self.eventsArray.objectAtIndex(indexPath.row) as! PFObject
+        self.performSegueWithIdentifier("showEventDetails", sender: self)
         
     }
 
