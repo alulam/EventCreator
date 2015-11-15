@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork.png" translatesAutoresizingMaskIntoConstraints="NO" id="DIm-pj-euz">
+                                <rect key="frame" x="140" y="56" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DIm-pj-euz" secondAttribute="height" multiplier="1:1" id="MVl-Yo-5Ar"/>
+                                    <constraint firstAttribute="width" constant="320" id="oZf-CE-0tj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AroundUs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA0-bf-bdC">
+                                <rect key="frame" x="193" y="384" width="214" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="8Z7-Ox-v9E"/>
+                                    <constraint firstAttribute="width" constant="214" id="yke-RU-NMv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="NA0-bf-bdC" secondAttribute="bottom" constant="150" id="8zd-fq-qZG"/>
+                            <constraint firstItem="DIm-pj-euz" firstAttribute="centerX" secondItem="NA0-bf-bdC" secondAttribute="centerX" id="A5I-34-Him"/>
+                            <constraint firstItem="NA0-bf-bdC" firstAttribute="top" secondItem="DIm-pj-euz" secondAttribute="bottom" constant="8" symbolic="YES" id="E0g-he-m22"/>
+                            <constraint firstItem="DIm-pj-euz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Lfa-Nq-RCC"/>
+                            <constraint firstItem="DIm-pj-euz" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="36" id="t4H-Ha-GtS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,4 +52,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iTunesArtwork.png" width="512" height="512"/>
+    </resources>
 </document>

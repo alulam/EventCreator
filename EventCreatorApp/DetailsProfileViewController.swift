@@ -25,7 +25,11 @@ class DetailsProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController!.navigationBar.tintColor = UIColor.redColor()
+        
         self.titleLabel?.text = self.eventObject2.objectForKey("eventTitle") as? String
+        self.titleLabel!.font = UIFont.boldSystemFontOfSize(18.0)
+
         self.descLabel?.text = self.eventObject2.objectForKey("eventDescription") as? String
         
         let dateOfEvent = self.eventObject2.objectForKey("eventDate") as! NSDate

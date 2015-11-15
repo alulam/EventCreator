@@ -33,7 +33,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, myerror: NSError?) -> Void in
             
             if(myerror == nil){
-                print("found \(objects!.count) events")
+                print("Found \(objects!.count) events")
                 
                 
                 if let events = objects as? [PFObject]? {
@@ -48,7 +48,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
                 
             }else{
-                print("No events found")
+                print("No Events Found")
                 
                 
             }
@@ -215,6 +215,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     //******
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
@@ -225,10 +226,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.searchfield2?.text = ""
         
         self.loadData()
+        
         if(PFUser.currentUser() == nil){
             self.signinUser()
         }else{
-            print("Current User \(PFUser.currentUser()?.username)")
+            print("Current User: \((PFUser.currentUser()?.username)!)")
         }
         
     }
@@ -288,6 +290,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if(event.objectForKey("freeFood")?.boolValue == true ){
             cell.foodButton.hidden = false
+        }else{
+            cell.foodButton.hidden = true
         }
         
         return cell
@@ -343,7 +347,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, myerror: NSError?) -> Void in
             
             if(myerror == nil){
-                print("found \(objects!.count) events from search")
+                print("Found \(objects!.count) events from search")
                 
                 
                 if let events = objects as? [PFObject]? {
@@ -358,7 +362,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
                 
             }else{
-                print("No events found")
+                print("No Events Found")
                 
                 
             }
