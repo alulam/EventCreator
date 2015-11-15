@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController {
         let dateOfEvent = self.eventObject2.objectForKey("eventDate") as! NSDate
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "MM/dd/yyyy, hh:mm"
         
         let dateString = dateFormatter.stringFromDate(dateOfEvent)
         
@@ -41,7 +41,7 @@ class DetailsViewController: UIViewController {
             self.locationLabel?.text = self.eventObject2.objectForKey("eventAddress")! as? String
         }
         
-        self.costLabel?.text = self.eventObject2.objectForKey("cost")! as? String
+        self.costLabel?.text = "$\(String(self.eventObject2.objectForKey("cost")!))"
         self.foodLabel?.text = self.eventObject2.objectForKey("foodDescription") as? String
         
         

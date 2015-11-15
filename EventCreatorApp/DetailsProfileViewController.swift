@@ -31,14 +31,14 @@ class DetailsProfileViewController: UIViewController {
         let dateOfEvent = self.eventObject2.objectForKey("eventDate") as! NSDate
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "MM/dd/yyyy, hh:mm"
         
         let dateString = dateFormatter.stringFromDate(dateOfEvent)
         
         self.timeLabel?.text = dateString
         
         self.locationLabel?.text = self.eventObject2.objectForKey("eventAddress") as? String
-        self.costLabel?.text = String(self.eventObject2.objectForKey("cost")!)
+        self.costLabel?.text = "$\(String(self.eventObject2.objectForKey("cost")!))"
         self.foodLabel?.text = self.eventObject2.objectForKey("foodDescription") as? String
         self.rsvpLabel?.text = "Number of RSVPs: \((self.eventObject2.objectForKey("rsvpList") as! NSArray).count)"
         

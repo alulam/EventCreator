@@ -13,6 +13,10 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var searchfield1: UITextField? = UITextField()
+    @IBOutlet var searchfield2: UITextField? = UITextField()
+    
+    
     var eventsArray:NSMutableArray = NSMutableArray()
     var eventObject = PFObject(className: "Event")
     
@@ -125,6 +129,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }))
         
         
+        
         alert.addAction(UIAlertAction(title: "Signup", style: UIAlertActionStyle.Default, handler: {
             alertAction in
             //********************************************************************
@@ -211,6 +216,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
+        self.searchfield1?.text = ""
+        self.searchfield2?.text = ""
+        
         self.loadData()
         if(PFUser.currentUser() == nil){
             self.signinUser()
@@ -219,6 +227,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -291,6 +300,62 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.loadData()
         
     }
+    
+    
+    @IBAction func goButtonClicked(sender: AnyObject) {
+      print("Go Button Clicked")
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        
+        
+        let searchDateString1 = self.searchfield1!.text
+        let searchDate1 = dateFormatter.dateFromString(searchDateString1!)
+        
+        let searchDateString2 = self.searchfield2!.text
+        let searchDate2 = dateFormatter.dateFromString(searchDateString2!)
+        
+        self.eventsArray.removeAllObjects()
+        
+        let query = PFQuery(className: "Event")
+        
+        query.whereKey("eventDate", greaterThanOrEqualTo: searchDate1!)
+        query.whereKey("eventDate", lessThanOrEqualTo: searchDate2!)
+  
+        query.orderByDescending("createdAt")
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, myerror: NSError?) -> Void in
+            
+            if(myerror == nil){
+                print("found \(objects!.count) events from search")
+                
+                
+                if let events = objects as? [PFObject]? {
+                    
+                    
+                    for event in events! {
+                        
+                        self.eventsArray.addObject(event)
+                    }
+                    self.tableView.reloadData()
+                    
+                }
+                
+            }else{
+                print("No events found")
+                
+                
+            }
+        }
+
+        
+        
+    }
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
